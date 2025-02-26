@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Traverse</title>
+    <script>
+        let data = [67,97,54,32,7,8,31,41,4,1,0];
+        // for(let i =0;i<data.length;i++)
+        // {
+        //     document.write(`Array ${i} is ${data[i]} <br>`)
+            
+        // }
+        function getElement (){
+            let el = document.getElementById("element").value;
+            if(el<data.length && typeof parseInt(el)==="number"){
+                alert(data[el])
+            }
+            else{
+                alert("you have chosen the value whose index value is not matching with the given array")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type ="text" id="element"/>
+    <button onclick="getElement()">getElement By clicking button</button>
+    
+</body>
+</html>

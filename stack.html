@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack
+    </title>
+
+    <script>
+        let data=[];
+         let currentLength=data.length;
+        let max =6
+        function push(newValue){
+     if(currentLength>=max){
+        alert("you are exceeding the maximum length of Stack"+newValue)
+     }else{
+        data[currentLength]=newValue
+        currentLength+=1;
+     }
+     
+        }
+
+      function pop(){
+        if(currentLength>0){
+            currentLength-=1
+            data.length=currentLength
+        }else{
+            alert("stack is already empty")
+        }
+       
+      }
+        
+        console.log(data)
+        console.warn(data)
+        push(20)
+        push(45)
+        push(54)
+        push(34)
+        push(56)
+        push(67)
+        pop()
+        pop()
+        push(70)
+     
+        console.log(data)
+        console.warn(data)
+    </script>
+</head>
+<body>
+    <h1>A stack is a fundamental data structure that follows the Last-In-First-Out (LIFO) principle. Think of it like a stack of plates - you can only add or remove plates from the top. </h1>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack
+    </title>
+
+    <script>
+        let data=[];
+         let currentLength=data.length;
+        let max =6
+        function push(){
+            let newValue = document.getElementById('newEl').value;
+     if(currentLength>=max){
+        alert("you are exceeding the maximum length of Stack"+newValue)
+     }
+     else if(newValue===""|| !/^-?\d+$/.test(newValue)){
+        alert("please insert value in input box")
+        
+     }else{
+        data[currentLength]=newValue
+        currentLength+=1;
+        document.getElementById('newEl').value=""
+        console.warn("Element are added")
+     }
+     
+        }
+
+      function pop(){
+        if(currentLength>0){
+            currentLength-=1
+            data.length=currentLength
+        }else{
+            alert("stack is already empty")
+        }
+       
+      }
+
+      function display(){
+        for(let i=0; i<=currentLength-1;i++){
+        console.warn("Stack Element no",i, "and value is", data[i])
+        }
+      }
+        
+       
+    </script>
+</head>
+<body>
+    <h1>A stack is a fundamental data structure that follows the Last-In-First-Out (LIFO) principle. Think of it like a stack of plates - you can only add or remove plates from the top. </h1>
+    <input type="text" placeholder="Add Your element Here" id="newEl">
+    <button onclick="push()">Add an Element</button>
+    <button onclick="pop()">Remove an Element</button>
+    <button onclick="display()">Display an Element</button>
+</body>
+</html>
