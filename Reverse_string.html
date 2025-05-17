@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing the string </title>
+
+    <script>
+let data = []
+let currentSize= data.length;
+
+function push(newValue){
+    data[currentSize]=newValue
+    currentSize+=1;
+
+}
+
+function pop(){
+    lastRemovedItem=data[currentSize-1]
+    currentSize-=1;
+    data.length=currentSize
+    return lastRemovedItem
+}
+
+function reverseStr(item){
+    for (let i=0; i<item.length;i++){
+        push(item[i])
+
+    }
+
+    for(let i=0;i<item.length;i++){
+        item[i]=pop()
+    }
+}
+
+let Str="animal"
+Str=Str.split("")
+reverseStr(Str)
+console.warn(Str.join(""))
+console.warn(Str)
+    </script>
+</head>
+<body>
+    <h1>Reversing the string</h1>
+</body>
+</html>
